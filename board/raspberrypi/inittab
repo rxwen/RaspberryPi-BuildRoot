@@ -11,7 +11,8 @@ moun::sysinit:/bin/mount -a
 host::sysinit:/bin/hostname `cat /etc/hostname`
 init::sysinit:/etc/init.d/rcS
 
-1:1:respawn:/sbin/getty 115200 tty1
+#1:1:respawn:/sbin/getty 115200 tty1
+1:1:respawn:/sbin/getty 115200 ttyAMA0
 
 # Logging junk
 mess::sysinit:/bin/touch /var/log/messages
