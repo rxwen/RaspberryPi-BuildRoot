@@ -1,0 +1,2 @@
+ACTION=="add",KERNEL=="sda2", RUN+="/usr/bin/ntfs-3g /dev/sda2 /ntfs"
+ACTION=="remove",KERNEL=="sda2", RUN+="/bin/umount /ntfs"
