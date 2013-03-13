@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone='no'?><!--*-nxml-*-->
+<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
+<service-group>
+<!-- Customize this to get a different name for your server in the Finder. -->
+<name replace-wildcards="yes">%h AFP Server</name>
+<service>
+<type>_device-info._tcp</type>
+<port>0</port>
+<!-- Customize this to get a different icon in the Finder. -->
+<txt-record>model=RackMac</txt-record>
+</service>
+<service>
+<type>_afpovertcp._tcp</type>
+<port>548</port>
+</service>
+</service-group>
