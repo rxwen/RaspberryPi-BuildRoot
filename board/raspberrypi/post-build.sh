@@ -3,9 +3,6 @@ TARGETDIR=$1
 # mkpasswd, from the 'whois' package in Debian/Ubuntu.
 sed -i 's%^root::%root:8kfIfYHmcyQEE:%' $TARGETDIR/etc/shadow
 
-# Point /bin/sh to /bin/bash
-ln -T -s /bin/bash $TARGETDIR/bin/sh 
-
 # Package the /boot partition
 tar -czf $TARGETDIR/../images/boot.tar.gz --exclude=Image -C $TARGETDIR/boot/ .
 
